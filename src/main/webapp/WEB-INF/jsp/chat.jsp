@@ -12,7 +12,20 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello to WebSockets Application</h1>
-        <a href="${pageContext.request.contextPath}/chatWebPage">Go to Chat page</a>
+        <h1>Basic WebSocket Example</h1>
+        Click your button:
+        <button type="button" onclick="connect()" id="connect" >Connect</button>
+        <button type="button" onclick="disconnect()" id="disconnect" >Disconnect</button>
+        
+        <div>
+            <div>
+                <input type="text" id="message" placeholder="Your message"/>
+            </div>
+            <button id="send" onclick="send()">Send</button>
+        </div>
+        
+        <div id="content"></div>
+        
+        <script src="js/websocket.js"></script>
     </body>
 </html>
